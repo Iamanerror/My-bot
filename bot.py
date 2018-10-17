@@ -42,17 +42,17 @@ async def serverinfo(ctx):
     await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
-@commands.has_role("ðŸ˜‚ðŸ‘Œ Friends")
+@commands.has_role("inspector")
 async def kick(ctx, user: discord.Member):
     await bot.say(":boot: Cya, {}. Ya loser!".format(user.name))
     await bot.kick(user)
 
 @bot.command(pass_context=True)
 async def embed(ctx):
-    embed = discord.Embed(title="test", description="my name jeff", color=0x00ff00)
+    embed = discord.Embed(title="test", description="my name imran", color=0x00ff00)
     embed.set_footer(text="this is a footer")
     embed.set_author(name="Will Ryan of DAGames")
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
-bot.run("pepeppepepepe")
+bot.run(os.environ['BOT_TOKEN'])
